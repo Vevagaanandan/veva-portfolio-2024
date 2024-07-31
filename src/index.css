@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --primary-dark: #4070F4;
+}
+
+@layer base{
+    body{
+        @apply font-[Arial]
+    }
+
+    h1{
+        @apply text-5xl;
+        @apply font-bold;
+    }
+
+    p, span{
+        @apply tracking-wide;
+    }
+
+    @media only screen and (max-width:950px) {
+        h1{
+            @apply text-4xl;
+        }
+    }
+
+    .theIcons{
+        @apply hover:text-[--primary-dark] text-3xl md:mr-6 cursor-pointer;
+    }
+
+    .projectTabBtn-active{
+        @apply bg-[--primary-dark] font-semibold py-2 rounded text-white md:w-52 text-center;
+    }
+
+    .projectTabBtn-notActive{
+        @apply cursor-pointer font-semibold py-2 rounded text-black md:w-52 text-center;
+    }
+
+    .project-images{
+        @apply w-[300px] h-[150px] m-auto object-cover rounded-md shadow-2xl border-[#DCDCDC] border-[1px];
+        /* @apply w-[300px] h-[150px] m-auto object-cover rounded-md border-slate-400 shadow-2xl; */
+    }
+
+    .skills-item{
+        @apply shadow-2xl p-4 rounded-md;
+    }
+}
+
+@media only screen and (min-width:950px){
+    .theContainer{
+        width: 1280px;
+        margin: auto;
+        padding: 0% 5%;
+    }
+}
+
+.theContainer{
+    margin: auto;
+    padding: 0% 5%;
+}
+
+/* .theContainerTwo{
+    padding:80px 0px;
+} */
+
+.mainColor{
+    color: #4070F4 ;
+}
+
+.projectsDisplay{
+    display: block;
+}
+
+.projectsDisplayNone{
+    display: none;
+}
+
+.darknav{
+    color:#fff;
+    background-color: #4070F4;
+    transition: 0.5s;
+    border-bottom: 1px solid var(--primary-dark);
+}
+
+.hamburger-bar{
+    display: none;
+}
+
+.hide-mobileMenu{
+    right: -200px;
+}
+
+@media only screen and (max-width:650px){
+    .hamburger-bar{
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
